@@ -1,0 +1,67 @@
+Sales and Inventory Management System - Summary
+What It Is
+A web-based financial and inventory management system designed specifically for Entyre Limited, a tire distribution and automotive service company in Malawi with branches in Blantyre, Lilongwe, Salima, and Nkhotakota.
+The Problem It Solves
+Entyre Limited currently operates entirely manually using Excel spreadsheets, handwritten invoices, and phone calls. This creates:
+
+Frequent data entry errors and duplications
+Delayed and inaccurate financial reports
+Poor cash flow visibility
+Difficulty tracking inventory levels
+Time-consuming manual reconciliation
+No real-time business insights
+
+What The System Does
+Core Functions:
+
+Financial Management
+
+Automatically records all sales transactions in real-time
+Generates professional invoices with company branding
+Creates quotations for customer requests
+Tracks payments (cash, bank transfers, mobile money)
+Produces financial reports (income statements, balance sheets, daily sales)
+
+
+Inventory Control
+
+Tracks tire and spare parts stock levels in real-time
+Sends automatic alerts when stock runs low
+Records stock movements (sales, receipts, adjustments)
+Maintains product catalogs with specifications and pricing
+
+
+Customer & Sales Management
+
+Maintains customer records (contact info, service history)
+Processes sales transactions
+Manages service appointments and breakdown requests
+Supports both individual and corporate clients
+
+
+Payment Integration
+
+Integrates with Mpamba and Airtel Money (local mobile payment platforms)
+Processes multiple payment methods
+Maintains complete payment audit trails
+
+
+
+Technical Overview
+
+Platform: Web-based (accessible via browser on any device)
+Technology: HTML/CSS/JavaScript frontend, PHP backend, MySQL database
+Architecture: N-tier (separates presentation, business logic, and data layers)
+Access: Role-based permissions for managers, accountants, technicians, and customers
+
+Key Benefits
+
+Eliminates manual data entry and associated errors
+Provides real-time financial visibility for better decision-making
+Automates invoice and quotation generation
+Enables mobile access for field technicians
+Reduces financial reporting time from days to minutes
+Improves inventory control and prevents stockouts
+Supports business growth across multiple branches
+
+In essence, it's transforming a paper-based tire and automotive service business into a digitally-managed operation with accurate, real-time financial and inventory control.

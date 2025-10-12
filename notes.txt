@@ -1,0 +1,197 @@
+1. ADMINISTRATOR/MANAGER
+User Management
+
+Register new users with role assignments
+Manage user accounts and access credentials
+Assign role-based permissions
+View system audit logs
+
+Customer Management
+
+Register new customers (individual and corporate)
+Manage customer contact information
+View customer service history
+Track customer payment preferences
+
+Sales Operations
+
+Process sales transactions
+Create and manage quotations
+Convert quotations to sales orders
+Approve/manage transactions
+Schedule service appointments
+
+Inventory Oversight
+
+View real-time inventory levels across all products
+Receive low stock alerts and notifications
+Manage product catalog (tire specifications, pricing)
+Set minimum stock level thresholds
+View inventory valuation reports
+
+Financial Management
+
+Access all financial reports (daily sales, monthly income statements)
+View cash flow tracking
+Monitor business performance metrics
+Generate financial analysis for decision-making
+
+System Administration
+
+Configure payment gateway integrations
+Manage system settings and preferences
+Access comprehensive system dashboards
+View all user activities
+
+
+2. ACCOUNTANT
+Financial Transactions
+
+Record all financial transactions automatically
+Verify payment records (cash, bank transfers, mobile payments)
+Process refunds or payment adjustments
+Track payment methods used
+
+Invoice Management
+
+Generate professional invoices with company branding
+Create itemized billing statements
+Apply taxes and discounts
+Export invoices (PDF, Excel formats)
+Manage invoice numbering and tracking
+
+Financial Reporting
+
+Generate income statements
+Create balance sheets
+Produce daily sales summaries
+Generate monthly financial reports
+Create inventory valuation reports
+Export reports in multiple formats
+
+Payment Integration
+
+Process mobile payments (Mpamba, Airtel Money)
+Record bank transfer payments
+Manage cash transaction records
+Reconcile payment data
+
+Data Management
+
+Ensure data integrity and accuracy
+Perform financial data validation
+Maintain audit trails for all financial modifications
+
+
+3. MECHANICS/TECHNICIANS
+Service Management
+
+View scheduled service appointments
+Access customer vehicle information
+Record service completion details
+Update breakdown assistance status
+
+Inventory Usage
+
+View available tire inventory
+Record parts/tire usage during service
+Request stock for specific jobs
+Update stock movement in real-time
+
+Customer Interaction
+
+Access customer service history
+View service requirements and quotations
+Provide service updates
+
+Mobile Access
+
+Access system via mobile devices for field work
+Record on-site service information
+View customer location and breakdown details
+
+
+4. CUSTOMERS
+Service Requests
+
+Request breakdown assistance
+Schedule tire fitting and balancing appointments
+Request wheel alignment services
+Request vehicle maintenance services
+View available services and products
+
+Quotations & Orders
+
+Request service quotations
+View quotation details (pricing, validity periods)
+Accept quotations and convert to orders
+Track order status
+
+Payment Processing
+
+View invoices for services rendered
+Pay via multiple methods (cash, mobile money, bank transfer)
+Use integrated mobile payment platforms (Mpamba, Airtel Money)
+View payment history
+
+Account Management
+
+View personal/corporate account information
+Update contact details
+View service history
+Access past invoices and receipts
+
+Product Information
+
+Browse tire product catalog
+View tire specifications for different vehicles
+Check product pricing
+View product availability
+
+Communication
+
+Receive email notifications for appointments
+Get updates on service completion
+Share feedback on social media integration
+Receive invoice notifications
+
+
+5. SUPPLIERS (Limited Access)
+Product Information
+
+View product catalog requirements
+Receive stock replenishment requests
+Access supplier information management
+
+Inventory Coordination
+
+Receive low stock notifications
+Update product availability
+Manage product specifications and pricing
+
+## 💼 Objective
+Design and build fully responsive, styled authentication pages (Sign In and Sign Up) using a shared group layout. These pages must support email/password login, and follow the application’s theme and typography.
+
+The design should take inspiration from the attached layout and adapt it into this application’s brand identity, following the theme and typography defined in `/screenshots`.
+
+
+## ✅ Tasks
+- Create a layout with proper structure, margins, and responsiveness.
+- Ensure the design feels cohesive across both pages.
+- Sign In and Sign Up pages should use common form components.
+- Create email/password inputs and you can add other fields to adhere to the systems functionality.
+- Style all components with Tailwind CSS using the theme in `/screenshots`.
+- Make it Responsive.
+- Design must work well across devices.
+- Use mobile-first and accessible practices.
+
+## 📦 Output Requirements
+- `/sign-in` and `/sign-up` pages with shared layout
+- Responsive, mobile-friendly, accessible forms
+- Reusable form and provider components
+- Assets must be sourced from `/public`
+
+## 📝 Notes
+- Keep UI modular and theme-aligned.
+- Focus is only on frontend (UI). Auth logic will be implemented separately.
+- Maintain clean code and proper folder structure.
