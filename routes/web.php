@@ -4,13 +4,12 @@ use App\Http\Controllers\Dashboard\AccountantDashboardController;
 use App\Http\Controllers\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Dashboard\CustomerDashboardController;
 use App\Http\Controllers\Dashboard\MechanicDashboardController;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Middleware\RedirectBasedOnRole;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Generic dashboard route - redirects based on role

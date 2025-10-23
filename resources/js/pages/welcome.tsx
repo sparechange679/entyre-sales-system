@@ -1,132 +1,30 @@
-import Card from '@/components/Card';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import PartCard from '@/components/PartCard';
 import { Button } from '@/components/ui/button';
 import { Head } from '@inertiajs/react';
 
-export default function Welcome() {
-    // Sample car data for demonstration
-    const popularCars = [
-        {
-            title: 'Koenigsegg',
-            type: 'Sport',
-            image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=200&fit=crop',
-            fuelCapacity: '90L',
-            transmission: 'Manual',
-            capacity: '2 People',
-            price: 99.0,
-        },
-        {
-            title: 'Nissan GT - R',
-            type: 'Sport',
-            image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '2 People',
-            price: 80.0,
-            originalPrice: 100.0,
-        },
-        {
-            title: 'Rolls - Royce',
-            type: 'Sedan',
-            image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=200&fit=crop',
-            fuelCapacity: '70L',
-            transmission: 'Manual',
-            capacity: '4 People',
-            price: 96.0,
-            isFavorite: true,
-        },
-        {
-            title: 'Nissan GT - R',
-            type: 'Sport',
-            image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '2 People',
-            price: 80.0,
-            originalPrice: 100.0,
-        },
-    ];
+interface Part {
+    id: number;
+    title: string;
+    type: string;
+    image: string;
+    brand: string;
+    tireSize?: string;
+    loadIndex?: string;
+    speedRating?: string;
+    stock: string;
+    price: number;
+    originalPrice?: number;
+    isFeatured?: boolean;
+}
 
-    const recommendedCars = [
-        {
-            title: 'All New Rush',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=200&fit=crop',
-            fuelCapacity: '70L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 72.0,
-            originalPrice: 80.0,
-        },
-        {
-            title: 'CR - V',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 80.0,
-            isFavorite: true,
-        },
-        {
-            title: 'All New Terios',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=200&fit=crop',
-            fuelCapacity: '90L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 74.0,
-        },
-        {
-            title: 'CR - V',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 80.0,
-            isFavorite: true,
-        },
-        {
-            title: 'MG ZX Exclusice',
-            type: 'Hatchback',
-            image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=200&fit=crop',
-            fuelCapacity: '70L',
-            transmission: 'Manual',
-            capacity: '4 People',
-            price: 76.0,
-            originalPrice: 80.0,
-        },
-        {
-            title: 'New MG ZS',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1581540222194-0def2dda95b8?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 80.0,
-        },
-        {
-            title: 'MG ZX Excite',
-            type: 'Hatchback',
-            image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=200&fit=crop',
-            fuelCapacity: '90L',
-            transmission: 'Manual',
-            capacity: '4 People',
-            price: 74.0,
-            isFavorite: true,
-        },
-        {
-            title: 'New MG ZS',
-            type: 'SUV',
-            image: 'https://images.unsplash.com/photo-1581540222194-0def2dda95b8?w=400&h=200&fit=crop',
-            fuelCapacity: '80L',
-            transmission: 'Manual',
-            capacity: '6 People',
-            price: 80.0,
-        },
-    ];
+interface WelcomeProps {
+    featuredParts: Part[];
+    recommendedParts: Part[];
+}
+
+export default function Welcome({ featuredParts, recommendedParts }: WelcomeProps) {
 
     return (
         <>
@@ -282,41 +180,53 @@ export default function Welcome() {
                         </div>
                     </div>
 
-                    {/* Popular Car Section */}
+                    {/* Featured Parts Section */}
                     <div className="mb-8">
                         <div className="mb-5 flex items-center justify-between">
                             <h3 className="text-sm font-semibold text-[#90A3BF] md:text-base">
-                                Popular Car
+                                Featured Parts
                             </h3>
                             <button className="text-sm font-semibold text-[#3563E9] transition-colors hover:underline md:text-base">
                                 View All
                             </button>
                         </div>
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                            {popularCars.map((car, index) => (
-                                <Card key={index} {...car} />
-                            ))}
+                            {featuredParts && featuredParts.length > 0 ? (
+                                featuredParts.map((part) => (
+                                    <PartCard key={part.id} {...part} />
+                                ))
+                            ) : (
+                                <div className="col-span-4 text-center py-8 text-[#90A3BF]">
+                                    No featured parts available
+                                </div>
+                            )}
                         </div>
                     </div>
 
-                    {/* Recommendation Car Section */}
+                    {/* Recommended Parts Section */}
                     <div className="mb-8">
                         <div className="mb-5">
                             <h3 className="text-sm font-semibold text-[#90A3BF] md:text-base">
-                                Recommendation Car
+                                Recommended Parts
                             </h3>
                         </div>
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                            {recommendedCars.map((car, index) => (
-                                <Card key={index} {...car} />
-                            ))}
+                            {recommendedParts && recommendedParts.length > 0 ? (
+                                recommendedParts.map((part) => (
+                                    <PartCard key={part.id} {...part} />
+                                ))
+                            ) : (
+                                <div className="col-span-4 text-center py-8 text-[#90A3BF]">
+                                    No recommended parts available
+                                </div>
+                            )}
                         </div>
                     </div>
 
                     {/* Show More Button */}
                     <div className="mb-8 flex justify-center">
                         <Button className="h-11 rounded-[4px] bg-[#3563E9] px-5 text-base font-semibold text-white transition-colors hover:bg-[#264AC6]">
-                            Show more car
+                            Show more parts
                         </Button>
                     </div>
                 </main>

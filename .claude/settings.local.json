@@ -1,10 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(php artisan make:migration:*)",
-      "Bash(php artisan:*)",
-      "Bash(cat:*)",
-      "Bash(npm run build:*)"
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
