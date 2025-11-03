@@ -43,6 +43,21 @@ Install dependencies:
 npm install
 ```
 
+```sh
+# Example for composer dependencies for Laravel
+composer install
+```
+
+```sh
+# Example for Laravel
+php artisan key:generate
+```
+
+```sh
+# For running migrations in Laravel and seeding the database
+php artisan migrate --seed
+```
+
 Configure environment variables:
 
 - Copy the example `.env.example` to `.env` and set the appropriate values.
@@ -50,10 +65,11 @@ Configure environment variables:
 Start the development server:
 
 ```sh
-# Example for Node.js
-npm start
+# Example for running the Laravel code
+php artisan serve
 ```
 
+Access the application at `http://entyre-sales-system.test` (If you are using the Laravel Herd).
 Access the application at `http://localhost:3000` (or your configured port).
 
 ## Usage
