@@ -10,8 +10,6 @@ export interface PartCardProps {
     image: string;
     brand: string;
     tireSize?: string;
-    loadIndex?: string;
-    speedRating?: string;
     stock: string;
     price: number;
     originalPrice?: number;
@@ -26,8 +24,6 @@ export default function PartCard({
     image,
     brand,
     tireSize,
-    loadIndex,
-    speedRating,
     stock,
     price,
     originalPrice,

@@ -33,35 +33,28 @@ const getDashboardMenuItems = (role?: string): MenuItem[] => {
     const menus: Record<string, MenuItem[]> = {
         admin: [
             { id: 'dashboard', icon: Home, label: 'Dashboard', href: '/dashboard/admin' },
-            { id: 'car-rent', icon: Car, label: 'Car Rent', href: '#' },
-            { id: 'insight', icon: BarChart3, label: 'Insight', href: '#' },
-            { id: 'reimburse', icon: CreditCard, label: 'Reimburse', href: '#' },
-            { id: 'inbox', icon: Inbox, label: 'Inbox', href: '#' },
-            { id: 'calendar', icon: Calendar, label: 'Calendar', href: '#' },
+            { id: 'quotations', icon: FileText, label: 'Quotations', href: '/admin/quotations' },
+            { id: 'reports', icon: BarChart3, label: 'Reports', href: '/admin/reports' },
+            { id: 'income', icon: DollarSign, label: 'Income', href: '/admin/income' },
         ],
         mechanic: [
             { id: 'dashboard', icon: Home, label: 'Dashboard', href: '/dashboard/mechanic' },
+            { id: 'my-requests', icon: Wrench, label: 'My Assigned Requests', href: '/mechanic/requests' },
             { id: 'services', icon: Wrench, label: 'Services', href: '#' },
             { id: 'inventory', icon: Package, label: 'Inventory', href: '#' },
-            { id: 'insight', icon: BarChart3, label: 'Insight', href: '#' },
-            { id: 'inbox', icon: Inbox, label: 'Inbox', href: '#' },
-            { id: 'calendar', icon: Calendar, label: 'Calendar', href: '#' },
         ],
         accountant: [
             { id: 'dashboard', icon: Home, label: 'Dashboard', href: '/dashboard/accountant' },
             { id: 'transactions', icon: DollarSign, label: 'Transactions', href: '#' },
             { id: 'reports', icon: FileText, label: 'Reports', href: '#' },
-            { id: 'insight', icon: BarChart3, label: 'Insight', href: '#' },
-            { id: 'inbox', icon: Inbox, label: 'Inbox', href: '#' },
-            { id: 'calendar', icon: Calendar, label: 'Calendar', href: '#' },
         ],
         customer: [
             { id: 'dashboard', icon: Home, label: 'Dashboard', href: '/dashboard/customer' },
             { id: 'products', icon: Package, label: 'Browse Products', href: '/' },
             { id: 'cart', icon: ShoppingCart, label: 'Shopping Cart', href: '/cart' },
+            { id: 'services', icon: Wrench, label: 'My Service Requests', href: '/service-requests' },
+            { id: 'request-service', icon: Wrench, label: 'Request a Service', href: '/service-requests/create' },
             { id: 'quotations', icon: FileText, label: 'Quotations', href: '#' },
-            { id: 'inbox', icon: Inbox, label: 'Inbox', href: '#' },
-            { id: 'calendar', icon: Calendar, label: 'Calendar', href: '#' },
         ],
     };
 

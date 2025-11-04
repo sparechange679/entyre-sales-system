@@ -458,4 +458,18 @@ export default () => (
 
 - Every change must be programmatically tested. Write a new test or update an existing test, then run the affected tests to make sure they pass.
 - Run the minimum number of tests needed to ensure code quality and speed. Use `php artisan test` with a specific filename or filter.
+
+
+=== project-status ===
+
+## Project Status
+
+### Service Request Frontend
+
+- [x] Created customer-facing page to list service requests (`service-requests/index.tsx`).
+- [x] Created customer-facing page to view a single service request (`service-requests/show.tsx`).
+- [x] Created customer-facing form to create a new service request (`service-requests/create.tsx`).
+- [x] Refactored the creation form into a multi-step wizard.
+- [x] Created mechanic-facing page to list and manage assigned service requests (`mechanic/requests.tsx`).
+
 </laravel-boost-guidelines>

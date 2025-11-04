@@ -14,14 +14,24 @@ class ServiceTypesSeeder extends Seeder
     {
         $serviceTypes = [
             [
-                'name' => 'Emergency Tire Change',
-                'slug' => 'emergency-tire-change',
-                'description' => 'Fast tire replacement service when you have a flat or damaged tire. Our mechanics will replace your tire with a spare or new tire on-site.',
+                'name' => 'Tire Change',
+                'slug' => 'tire-change',
+                'description' => 'Professional tire replacement service when you have a flat or damaged tire. Our mechanics will replace your tire with a spare or new tire on-site.',
                 'base_price' => 5000.00,
                 'requires_parts' => true,
                 'estimated_duration' => 30,
                 'is_active' => true,
                 'sort_order' => 1,
+            ],
+            [
+                'name' => 'Fast Tire Change',
+                'slug' => 'fast-tire-change',
+                'description' => 'Emergency fast tire replacement service. Priority response for urgent tire issues to get you back on the road quickly.',
+                'base_price' => 7000.00,
+                'requires_parts' => true,
+                'estimated_duration' => 20,
+                'is_active' => true,
+                'sort_order' => 2,
             ],
             [
                 'name' => 'Battery Jump Start',
@@ -31,7 +41,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 20,
                 'is_active' => true,
-                'sort_order' => 2,
+                'sort_order' => 3,
             ],
             [
                 'name' => 'Battery Replacement',
@@ -41,7 +51,27 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => true,
                 'estimated_duration' => 30,
                 'is_active' => true,
-                'sort_order' => 3,
+                'sort_order' => 4,
+            ],
+            [
+                'name' => 'Oil Change',
+                'slug' => 'oil-change',
+                'description' => 'Complete oil change service with filter replacement. We use high-quality oil and filters suitable for your vehicle.',
+                'base_price' => 6000.00,
+                'requires_parts' => true,
+                'estimated_duration' => 45,
+                'is_active' => true,
+                'sort_order' => 5,
+            ],
+            [
+                'name' => 'Brake Service',
+                'slug' => 'brake-service',
+                'description' => 'Comprehensive brake inspection and service including pad replacement, rotor resurfacing, and brake fluid check.',
+                'base_price' => 8500.00,
+                'requires_parts' => true,
+                'estimated_duration' => 90,
+                'is_active' => true,
+                'sort_order' => 6,
             ],
             [
                 'name' => 'Vehicle Towing',
@@ -51,7 +81,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 60,
                 'is_active' => true,
-                'sort_order' => 4,
+                'sort_order' => 7,
             ],
             [
                 'name' => 'Fuel Delivery',
@@ -61,7 +91,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 25,
                 'is_active' => true,
-                'sort_order' => 5,
+                'sort_order' => 8,
             ],
             [
                 'name' => 'Tire Pressure Check & Inflation',
@@ -71,7 +101,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 15,
                 'is_active' => true,
-                'sort_order' => 6,
+                'sort_order' => 9,
             ],
             [
                 'name' => 'Engine Diagnosis',
@@ -81,7 +111,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 45,
                 'is_active' => true,
-                'sort_order' => 7,
+                'sort_order' => 10,
             ],
             [
                 'name' => 'Lockout Service',
@@ -91,7 +121,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 20,
                 'is_active' => true,
-                'sort_order' => 8,
+                'sort_order' => 11,
             ],
             [
                 'name' => 'Minor Mechanical Repair',
@@ -101,7 +131,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => true,
                 'estimated_duration' => 60,
                 'is_active' => true,
-                'sort_order' => 9,
+                'sort_order' => 12,
             ],
             [
                 'name' => 'Winch-Out Service',
@@ -111,7 +141,7 @@ class ServiceTypesSeeder extends Seeder
                 'requires_parts' => false,
                 'estimated_duration' => 45,
                 'is_active' => true,
-                'sort_order' => 10,
+                'sort_order' => 13,
             ],
         ];
 

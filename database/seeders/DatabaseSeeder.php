@@ -30,7 +30,6 @@ class DatabaseSeeder extends Seeder
             PartsCatalogSeeder::class,
             PartImagesSeeder::class,
             ServiceTypesSeeder::class,
-            MechanicsSeeder::class,
         ]);
     }
 }

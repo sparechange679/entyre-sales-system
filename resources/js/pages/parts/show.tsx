@@ -2,7 +2,6 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { Head, router } from '@inertiajs/react';
-import { Form } from '@inertiajs/react';
 import { useState } from 'react';
 import { Minus, Plus, ShoppingCart } from 'lucide-react';
 
@@ -18,7 +17,7 @@ interface Part {
     speedRating?: string;
     tireType?: string;
     treadPattern?: string;
-    specifications?: Record<string, any>;
+    specifications?: Record<string, unknown>;
     price: number;
     costPrice?: number;
     stockQuantity: number;
