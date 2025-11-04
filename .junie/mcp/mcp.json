@@ -1,0 +1,20 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "C:\\wamp64\\bin\\php\\php8.3.14\\php.exe",
+            "args": [
+                "C:\\Users\\bkish\\Herd\\entyre-sales-system\\artisan",
+                "boost:mcp"
+            ]
+        },
+        "herd": {
+            "command": "C:\\wamp64\\bin\\php\\php8.3.14\\php.exe",
+            "args": [
+                "C:/Users/bkish/.config/herd/bin/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "C:\\Users\\bkish\\Herd\\entyre-sales-system"
+            }
+        }
+    }
+}

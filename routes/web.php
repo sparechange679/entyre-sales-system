@@ -11,7 +11,22 @@ use Inertia\Inertia;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
+// Part routes (accessible to all)
+Route::get('/parts/{part}', [App\Http\Controllers\PartController::class, 'show'])->name('parts.show');
+
 Route::middleware(['auth', 'verified'])->group(function () {
+    // Cart routes
+    Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart', [App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+    Route::patch('/cart/{cartItem}', [App\Http\Controllers\CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/{cartItem}', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');
+    Route::delete('/cart', [App\Http\Controllers\CartController::class, 'clear'])->name('cart.clear');
+
+    // Checkout routes
+    Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout.index');
+    Route::post('/checkout/buy-now', [App\Http\Controllers\CheckoutController::class, 'buyNow'])->name('checkout.buynow');
+    Route::post('/checkout/success', [App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/thank-you', [App\Http\Controllers\CheckoutController::class, 'thankYou'])->name('checkout.thankyou');
     // Generic dashboard route - redirects based on role
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');

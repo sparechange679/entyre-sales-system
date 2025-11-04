@@ -57,9 +57,9 @@ const getDashboardMenuItems = (role?: string): MenuItem[] => {
         ],
         customer: [
             { id: 'dashboard', icon: Home, label: 'Dashboard', href: '/dashboard/customer' },
-            { id: 'services', icon: ShoppingCart, label: 'Services', href: '#' },
+            { id: 'products', icon: Package, label: 'Browse Products', href: '/' },
+            { id: 'cart', icon: ShoppingCart, label: 'Shopping Cart', href: '/cart' },
             { id: 'quotations', icon: FileText, label: 'Quotations', href: '#' },
-            { id: 'insight', icon: BarChart3, label: 'Insight', href: '#' },
             { id: 'inbox', icon: Inbox, label: 'Inbox', href: '#' },
             { id: 'calendar', icon: Calendar, label: 'Calendar', href: '#' },
         ],

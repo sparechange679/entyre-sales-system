@@ -24,5 +24,13 @@ class DatabaseSeeder extends Seeder
                 'email_verified_at' => now(),
             ]
         );
+
+        // Seed service types and mechanics
+        $this->call([
+            PartsCatalogSeeder::class,
+            PartImagesSeeder::class,
+            ServiceTypesSeeder::class,
+            MechanicsSeeder::class,
+        ]);
     }
 }

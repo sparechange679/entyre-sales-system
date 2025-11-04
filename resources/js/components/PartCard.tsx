@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { router } from '@inertiajs/react';
 import { Heart } from 'lucide-react';
 import { useState } from 'react';
 
@@ -16,10 +17,10 @@ export interface PartCardProps {
     originalPrice?: number;
     isFeatured?: boolean;
     onFavoriteToggle?: () => void;
-    onBuyNow?: () => void;
 }
 
 export default function PartCard({
+    id,
     title,
     type,
     image,
@@ -32,13 +33,25 @@ export default function PartCard({
     originalPrice,
     isFeatured: initialFavorite = false,
     onFavoriteToggle,
-    onBuyNow,
 }: PartCardProps) {
     const [isFavorite, setIsFavorite] = useState(initialFavorite);
 
-    const handleFavoriteClick = () => {
+    const handleFavoriteClick = (e: React.MouseEvent) => {
+        e.stopPropagation();
         setIsFavorite(!isFavorite);
         onFavoriteToggle?.();
+    };
+
+    const handleBuyNow = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        router.post('/checkout/buy-now', {
+            part_id: id,
+            quantity: 1,
+        });
+    };
+
+    const handleCardClick = () => {
+        router.visit(`/parts/${id}`);
     };
 
     // Format price in Malawi Kwacha
@@ -52,7 +65,9 @@ export default function PartCard({
     };
 
     return (
-        <div className="group flex w-full flex-col rounded-[10px] bg-white p-4 transition-shadow hover:shadow-lg md:p-6">
+        <div
+            onClick={handleCardClick}
+            className="group flex w-full flex-col rounded-[10px] bg-white p-4 transition-shadow hover:shadow-lg md:p-6 cursor-pointer">
             {/* Header */}
             <div className="mb-4 flex items-start justify-between md:mb-8">
                 <div className="flex flex-col">
@@ -184,7 +199,7 @@ export default function PartCard({
                 </div>
 
                 <Button
-                    onClick={onBuyNow}
+                    onClick={handleBuyNow}
                     className="h-10 rounded-[4px] bg-[#3563E9] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#264AC6] md:h-11 md:px-5 md:text-base"
                 >
                     Buy Now
