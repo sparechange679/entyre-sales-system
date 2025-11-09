@@ -20,7 +20,7 @@ class CheckoutController extends Controller
     /**
      * Create a checkout session for cart items
      */
-    public function checkout(): Response
+    public function checkout(): RedirectResponse
     {
         $cartItems = CartItem::with(['part.primaryImage'])
             ->where('user_id', auth()->id())

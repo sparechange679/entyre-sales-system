@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Part extends Model
 {
@@ -58,7 +59,7 @@ class Part extends Model
     /**
      * Get the primary image
      */
-    public function primaryImage()
+    public function primaryImage(): HasOne|Part
     {
         return $this->hasOne(PartImage::class)->where('is_primary', true);
     }
